@@ -1,6 +1,5 @@
-x = int (input("enter a number"))
-stringx = str(x)
-reversed = ""
-for i in stringx :
-    reversed = i + reversed
-final = int(reversed)
+original = str (input("enter a number"))
+reversal = ''
+for x in original:
+    reversal = x + reversal
+print(reversal)
