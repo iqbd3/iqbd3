@@ -35,7 +35,7 @@ def paswwordchecker(password):
         score -= 1
     if year in password or month in password:
         score -= 1
-
+    print(score)
     if score <= 0:
         print("Invalid password , try again ")
         return False
@@ -49,21 +49,24 @@ def paswwordchecker(password):
         print("Strong password ")
         return True
 
-
 # Main program
 # ________________________
-name = str(input("Enter your name: "))
-year = str(input("Enter your born date (year): "))
+name = input("Enter your name: ")
+year = input("Enter your born date (year YYYY): ")
+
 if int(year) < 1925 or int(year) > 2025:
     print("error")
     quit()
-month = str(input("Enter your born date (month): "))
+
+month = input("Enter your born date (month MM): ")
+
 if int(month) < 1 or int(month) > 12:
     print("error")
     quit()
 
 while True:
-    user_password = str(input("Enter your password: "))
+    user_password = input("Enter your password: ")
+
     if paswwordchecker(user_password):
         break
 
